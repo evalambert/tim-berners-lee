@@ -16,7 +16,7 @@ nav ul {
   display: flex;
   flex-direction: row;
 }
-.item{
+.item {
   padding-right: 5px;
 }
 /* LOGO */
@@ -26,12 +26,10 @@ nav ul {
 }
 
 /* BTN /////////// */
-header .btn-right{
+header .btn-right {
   display: flex;
   align-items: center;
 }
-
-
 header button {
   background-color: #963100;
   color: white;
@@ -39,9 +37,50 @@ header button {
   border-radius: 6px;
   font-size: 0.7rem;
 }
-
-/* /////////////////MEDIAQUERIES */
+/* ICONE */
+.icon-chevron,
+.icon-user {
+  font-size: 10px;
+}
+.icon-bar,
+.icon-glass {
+  font-size: 14px;
+}
+/* DESKTOP */
 .desktop {
   display: none;
 }
 
+/* /////////////////MEDIAQUERIES */
+
+@media (min-width: 760px) {
+  .desktop {
+    display: block;
+  }
+  .item.mobile {
+    display: none;
+  }
+  nav li {
+    display: flex;
+    flex-direction: row;
+    align-items: center
+  }
+  nav a.item,
+  div.item {
+    padding-right: 30px;
+  }
+  .login {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 30px
+  }
+  .btn-right{
+    display: flex;
+    flex-direction: row-reverse
+  }
+  header button {
+    font-size: 1rem;
+  }
+
+}
