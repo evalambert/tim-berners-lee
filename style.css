@@ -1,0 +1,47 @@
+/* HEADER */
+header {
+  height: auto;
+  padding: 10px;
+  color: white;
+  background-color: #071c2e;
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* NAV /////////// */
+nav ul {
+  display: flex;
+  flex-direction: row;
+}
+.item{
+  padding-right: 5px;
+}
+/* LOGO */
+.logo-britannica {
+  width: auto;
+  height: 15px;
+}
+
+/* BTN /////////// */
+header .btn-right{
+  display: flex;
+  align-items: center;
+}
+
+
+header button {
+  background-color: #963100;
+  color: white;
+  padding: 5px 5px;
+  border-radius: 6px;
+  font-size: 0.7rem;
+}
+
+/* /////////////////MEDIAQUERIES */
+.desktop {
+  display: none;
+}
+
