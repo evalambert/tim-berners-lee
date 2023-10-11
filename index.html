@@ -5,62 +5,217 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Britannica</title>
-    <link rel="stylesheet" href="reset.css"/>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="style.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
     />
   </head>
   <body>
-    <!-- WRAPPER /////////// -->
-    <div class="wrapper">
-      <header>
-        <!-- NAV /////////// -->
-        <nav>
-          <ul>
-            <div class="item logo-britannica desktop">
-              <img src="img/MendelNewThistleLogo.webp" alt="" />
-            </div>
-            <li>
-              <i class="item icon icon-bar fa-solid fa-bars"></i>
-              <a class="item desktop" href="#Accueil">Browse</a>
-            </li>
-            <li>
-              <i class="item icon icon-glass fa-solid fa-magnifying-glass"></i>
-              <a class="item desktop" href="#Apropos">Search</a>
-            </li>
-            <li>
-              <a class="item desktop" href="#Contact">Dictionary</a>
-            </li>
-            <li>
-              <a class="item desktop" href="#Contact">Quizzes</a>
-            </li>
-            <li>
-              <a class="item desktop" href="#Contact">Money</a>
-            </li>
-          </ul>
-        </nav>
-
-        <!-- LOGO /////////// -->
-        <div class="item logo-britannica mobile">
-          <img src="img/MendelNewThistleLogo.webp" alt="" />
-        </div>
-
-        <!-- BTNS /////////// -->
-        <div class="btn-right">
-          <div class="login">
-            <i class="item mobile icon icon-user fa-solid fa-user"></i>
-            <a class="item desktop" href="#">Login</a>
-            <i class="item icon icon-chevron fa-solid fa-chevron-down"></i>
+    <!-- HEADER /////////// -->
+    <header>
+      <!-- NAV /////////// -->
+      <nav>
+        <ul>
+          <div class="item logo-britannica desktop">
+            <img src="img/MendelNewThistleLogo.webp" alt="" />
           </div>
-          <button class="subscride">Subscribe</button>
+          <li>
+            <i class="item icon icon-bar fa-solid fa-bars"></i>
+            <a class="item desktop" href="#Accueil">Browse</a>
+          </li>
+          <li>
+            <i class="item icon icon-glass fa-solid fa-magnifying-glass"></i>
+            <a class="item desktop" href="#Apropos">Search</a>
+          </li>
+          <li>
+            <a class="item desktop" href="#Contact">Dictionary</a>
+          </li>
+          <li>
+            <a class="item desktop" href="#Contact">Quizzes</a>
+          </li>
+          <li>
+            <a class="item desktop" href="#Contact">Money</a>
+          </li>
+        </ul>
+      </nav>
+      <!-- LOGO /////////// -->
+      <div class="item logo-britannica mobile">
+        <img src="img/MendelNewThistleLogo.webp" alt="" />
+      </div>
+      <!-- BTN /////////// -->
+      <div class="btn-right">
+        <div class="login">
+          <i class="item mobile icon icon-user fa-solid fa-user"></i>
+          <a class="item desktop" href="#">Login</a>
+          <i class="item icon icon-chevron fa-solid fa-chevron-down"></i>
         </div>
-      </header>
+        <button class="subscride">Subscribe</button>
+      </div>
+    </header>
 
-      <main></main>
-      <footer></footer>
-    </div>
-
+    <!-- MAIN /////////// -->
+    <main>
+      <!-- NAV-CRUMB /////////// -->
+      <nav class="crumbs">
+        <ol>
+          <li class="crumb"><a href="#">Home</a></li>
+          <li class="crumb"><a href="#">Science</a></li>
+          <li class="crumb">Mathematics</li>
+        </ol>
+      </nav>
+      <!-- ARTICLE -->
+      <article>
+        <!-- CONTAINER -FLEX -->
+        <p class="pills mobile">Science & Tech</p>
+        <div class="container-flex">
+          <!-- TITLES -->
+          <div class="titles">
+            <h1>Tim Berners-Lee</h1>
+            <h2>British scientist</h2>
+          </div>
+          <!-- BTN - MOBILE -->
+          <div class="article-btn mobile">
+            <button>
+              <i class="fa-solid fa-ellipsis-vertical"></i>
+              Action
+            </button>
+          </div>
+          <!-- BTN - DESKTOP -->
+          <div class="article-btn desktop">
+            <button>
+              <i class="fa-solid fa-print"></i>
+              Print
+            </button>
+            <button>
+              <i class="fa-solid fa-certificate"></i>
+              Cite
+            </button>
+            <button>
+              <i class="fa-solid fa-share-nodes"></i>
+              Share
+            </button>
+            <button>
+              <i class="fa-solid fa-message"></i>
+              Feedback
+            </button>
+            <button>
+              <i class="fa-solid fa-ellipsis-vertical"></i>
+            </button>
+          </div>
+        </div>
+        <!-- INFO - MOBILE -->
+        <div class="info mobile">
+          <p class="italic">Also known as: Sir Tim Berners-Lee</p>
+          <p>
+            Written by <a class="dotted" href="#">Michael Aaron Dennis</a>
+            <br />
+            Fact-checked by <a class="dotted" href="#">Michael Aaron Dennis</a>
+            <br />
+            Last Updated: <a href="#">Article History</a>
+          </p>
+          <button class="table-content">
+            <i class="fa-sharp fa-solid fa-list-ul"></i>
+            Table of Contents
+          </button>
+          <button class="audio-player">
+            <i class="fa-regular fa-circle-play"></i>
+            Listen to article 3 minutes
+            <i class="fa-solid fa-waveform-lines"></i>
+          </button>
+        </div>
+        <!-- INFO - DESKTOP -->
+        <div class="info desktop">
+          <p class="italic">Also known as: Sir Tim Berners-Lee</p>
+          <p>
+            By
+            <a href="">Michael Aaron Dennis</a>
+            • Last Updated:
+            <time datetime="2015-05-16 19:00">Dec 2, 2022</time>
+            •
+            <a href="">Edit History</a>
+          </p>
+        </div>
+        <!-- ASIDE DESKTOP & MOBILE -->
+        <section class="aside">
+          <!-- IMG - MOBILE -->
+          <div class="bloc-img mobile">
+            <!-- IMG -->
+            <figure>
+              <img
+                src="img/tim_berners_lee.jpg"
+                alt="Portrait photo de Tim Berners-Lee"
+              />
+              <i class="fa-solid fa-magnifying-glass-plus"></i>
+              <figcaption>Tim Berners-Lee</figcaption>
+            </figure>
+            <!-- TXT -->
+            <p>
+              <span class="bold">Category:</span>
+              <span class="pills">Science & Tech</span>
+            </p>
+            <p><span class="bold">In Full: </span> Sir Tim Berners-Lee</p>
+            <p><span class="bold">Born: </span> England</p>
+            <p>
+              <span class="bold">Founder:</span> June 8, 1955, London, England
+              (age 68)
+            </p>
+            <button>See all related content</button>
+          </div>
+          <!-- IMG - DESKTOP -->
+          <div class="bloc-img desktop">
+            <!-- IMG -->
+            <figure>
+              <img
+                src="img/tim_berners_lee.jpg"
+                alt="Portrait photo de Tim Berners-Lee"
+              />
+              <i class="fa-solid fa-magnifying-glass-plus"></i>
+              <figcaption>Tim Berners-Lee</figcaption>
+            </figure>
+            <!-- TXT -->
+            <p><span class="bold">See</span> all media</p>
+            <p><span class="bold">Born:</span> June 8, 1955 (age 67)</p>
+            <p><span class="bold">London:</span> England</p>
+            <p><span class="bold">Founder:</span> World Wide Web Consortium</p>
+            <p>
+              <span class="bold">Inventions:</span> World Wide Web • World Wide
+              Web
+            </p>
+            <button>See all related content</button>
+          </div>
+          <!-- TXT -->
+          <div class="bloc-txt">
+            <p>
+              <span class="bold">Tim Berners-Lee</span>, in full
+              <span class="bold">Sir Tim Berners-Lee</span>, (born June 8, 1955,
+              London, England), British computer scientist, generally
+              <a href="#" class="dotted">credited</a> as the inventor of the
+              <a href="#">World Wide Web</a>. In 2004 he was awarded a
+              knighthood by <a href="#">Queen Elizabeth II</a> of the United
+              Kingdom and the inaugural Millennium Technology Prize (€1 million)
+              by the Finnish Technology Award Foundation.
+            </p>
+            <p>
+              Computing came naturally to Berners-Lee, as both of his parents
+              worked on the <a href="#">Ferranti Mark I</a>, the first
+              commercial computer. (See
+              <a href="#">computer: The first stored-programmachines</a>.) After
+              graduating in 1976 from the <a href="#"></a>University of Oxford,
+              Berners-Lee designed computer <a href="#">software</a> for two
+              years at Plessey Telecommunications Ltd., located in
+              <a href="#">Poole</a>, Dorset,<a href="#">England</a>. Following
+              this, he had several positions in the computer industry, including
+              a stint from June to December 1980 as a software engineering
+              consultant at <a href="#">CERN</a>, the European
+              <a href="#">particle physics</a> laboratory in
+              <a href="#">Geneva</a> .
+            </p>
+          </div>
+        </section>
+      </article>
+    </main>
+    <footer></footer>
   </body>
 </html>
