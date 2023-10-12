@@ -1,9 +1,12 @@
 body {
   font-family: "system-ui", "Helvetica Neue", Arial, sans-serif;
+  font-size: 0.9rem;
 }
-
 /* DESKTOP*/
 .desktop {
+  display: none;
+}
+nav{
   display: none;
 }
 /* HEADER ///////////  */
@@ -17,8 +20,7 @@ header {
   justify-content: space-between;
   align-items: center;
 }
-
-section.header{
+section.header {
   padding-bottom: 10px;
 }
 
@@ -34,13 +36,17 @@ header .item {
 /* LOGO ///////////  */
 header .logo-britannica {
   width: auto;
-  height: 15px;
+  height: 18px;
 }
 
 /* BTN ///////////  */
-button{
+button {
   cursor: pointer;
 }
+main button:hover {
+  background-color: rgba(20, 89, 157, 0.1);
+}
+
 header .btn-right {
   display: flex;
   align-items: center;
@@ -50,26 +56,38 @@ header button {
   color: white;
   padding: 5px 5px;
   border-radius: 6px;
-  font-size: 0.7rem;
 }
-/* ICON */
-header .icon-chevron,
-header .icon-user {
+header button:hover {
+  background-color: #602101;
+}
+
+.login i {
   font-size: 10px;
+  padding-right: 0;
+  margin-right: 3px;
+} 
+
+.img-tim{
+  height: 200px;
+  background-image: url(img/tim_berners_lee.webp);
+  background-position: center;
+  background-size: cover;
 }
-header .icon-bar,
-header .icon-glass {
-  font-size: 14px;
-}
+
+
 
 /* /////////////////MEDIAQUERIES */
 
-@media (min-width: 760px) {
+@media (min-width: 797px) {
   .desktop {
     display: block;
   }
   .item.mobile {
     display: none;
+  }
+
+  nav{ 
+    display: block;
   }
   .mobile {
     display: none;
@@ -78,6 +96,7 @@ header .icon-glass {
     display: flex;
     flex-direction: row;
     align-items: center;
+    flex-wrap: nowrap;
   }
   nav a.item,
   div.item {
@@ -88,13 +107,12 @@ header .icon-glass {
     flex-direction: row;
     align-items: center;
     padding-left: 30px;
-  }
+  }  
   .btn-right {
     display: flex;
     flex-direction: row-reverse;
   }
   header button {
-    font-size: 1rem;
   }
 }
 
@@ -105,32 +123,35 @@ main {
 
 /* CRUMBS */
 nav.crumbs {
-  padding-bottom: 10px;
+  padding-bottom: 25px;
+  font-size: 12px;
 }
 main nav .crumb {
   display: inline-block;
-  font-size: 0.7rem;
   color: #0a2b48;
 }
-main .crumb a::after {
-  display: inline-block;
-  color: #071c2e;
-  content: ">";
-  font-size: 0.7rem;
-  padding: 0 15px;
+ol{
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
+.crumbs i{
+  font-size: 7px;
+}
+
+
 /* ARTICLE */
 article {
-  max-width: 700px;
+  max-width: 900px;
 }
 article h1 {
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  font-size: 1.7rem;
+  font-family: Georgia, "Times New Roman", Times, serif;
   font-weight: bold;
+  padding: 7px 0 3px 0;
+  font-size: 20px;
 }
 article h2 {
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  font-size: 1rem;
+  font-family: Georgia, "Times New Roman", Times, serif;
 }
 article button {
   color: #16568f;
@@ -149,14 +170,12 @@ article a {
   color: #16568f;
 }
 article .info {
-  font-size: 1rem;
   padding-bottom: 20px;
   display: flex;
   flex-direction: column;
 }
 
 .info p:last-child {
-  font-size: 1rem;
   padding-bottom: 30px;
   display: flex;
   flex-direction: column;
@@ -172,14 +191,22 @@ article .italic {
 i {
   font-style: italic;
 }
+
+i.surname {
+  font-size: 12px;
+  padding-bottom: 6px;
+}
+.info p {
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.login {
+  margin-right: 10px;
+}
 .surname {
   color: grey;
   font-family: Georgia, "Times New Roman", Times, serif;
-}
-
-article p {
-  font-size: 1rem;
-  line-height: 1.5rem;
 }
 
 article .badge {
@@ -188,40 +215,76 @@ article .badge {
   width: auto;
   border-radius: 20px;
   padding: 0px 5px;
-  font-weight: bold ;
-  font-size: 0.7rem;
+  font-weight: bold;
+  font-size: 13px;
 }
 article img {
   width: 100%;
   height: auto;
 }
 article figure {
+  position: relative;
   border: 1px solid lightgray;
   border-radius: 10px;
   overflow: hidden;
-  max-width: 400px;
+  position: relative;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.08);
   -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.08);
   -moz-box-shadow: 0 0 8px rgba(0, 0, 0, 0.08);
 }
+span.loupe{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 30px;
+  height: 30px;
+  background-color: white;
+  color: #16568f;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
 article figcaption {
   display: flex;
   align-items: center;
-  height: 40px;
   padding: 10px;
+  font-size: 12px;
 }
-div .container-btn {
-  font-size: 0.7rem;
+.container-btn button {
+  font-size: 12px;
 }
 .info.desktop {
   display: none;
 }
-article .audio-player {
+button.audio-player {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   box-shadow: 0px 1px 5px 0px rgba(230, 230, 230, 0.75);
   -webkit-box-shadow: 0px 1px 5px 0px rgba(230, 230, 230, 0.75);
   -moz-box-shadow: 0px 1px 5px 0px rgba(230, 230, 230, 0.75);
+  color: black;
+  font-weight: normal;
+  border: none;
+}
+i.listen{
+  font-size: 25px;
+  color: rgb(63, 63, 63);
+}
+i.sound{
+  font-size: 30px;
+  color: rgb(63, 63, 63);
+}
+span.info{
+  font-size: 10px;
+  color: #2491f0;
+}
+.sound-info{
+  display: flex;
+  flex-direction: row;
 }
 article section.main {
   border: 1px solid lightgrey;
@@ -239,36 +302,77 @@ article .dotted {
 }
 .bio {
   border-top: 1px solid lightgrey;
-  border-bottom: 1px solid lightgrey;
-  padding: 10px 0;
+  padding: 20px 0 0 0;
+  font-size: 12px;
+}
+.bio p {
+  margin-bottom: 10px;
 }
 
-button.table-content{
+.bio > button {
+  margin: 0 auto;
+}
+
+button.table-content {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 15px;
 }
-button.table-content i{
+button.table-content i {
   padding-right: 10px;
 }
 
 .link-media {
   padding: 10px 0;
   text-align: center;
-  font-size: 0.7rem;
+  font-size: 12px;
 }
 .bloc-txt {
-  font-family: Georgia, 'Times New Roman', Times, serif ;
+  font-family: Georgia, "Times New Roman", Times, serif;
   padding: 10px 0;
+  font-size: 15px;
+  line-height: 26px;
 }
 
-.info > button{
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+
+.info > button {
   margin-top: 20px;
+}
+
+.bio {
+  border-bottom: none;
+}
+nav.crumbs {
+  padding-top: 15px;
+  padding-bottom: 10px;
+}
+.titles {
+  padding-bottom: 15px;
+}
+.container-btn button {
+  margin-right: 2px;
+}
+.bloc-txt.desktop {
+  font-size: 18px;
+  line-height: 32px;
+  padding-top: 0;
+}
+.info p:last-child {
+  padding-bottom: 0;
+  display: block; 
 }
 
 
 /* MEDIAQUERIES */
-@media (min-width: 760px) {
+@media (min-width: 797px) {
   section.header {
     display: flex;
     flex-direction: column;
@@ -276,12 +380,15 @@ button.table-content i{
   .info.mobile {
     display: none;
   }
+  .info.desktop {
+    display: block;
+  }
   .bloc-img.mobile {
     display: none;
   }
   .bloc-img.desktop {
     display: block;
-    min-width: 30%;
+    min-width: 300px;
     border: 1px solid lightgray;
     padding: 20px;
   }
@@ -293,9 +400,15 @@ button.table-content i{
     padding: 0;
     border: none;
   }
-
+  article h1 {
+    font-size: 28px;
+  }
+  article h2 {
+    font-size: 18px;
+  }
   .bloc-txt {
     padding-right: 20px;
+    max-width: 70%;
   }
   article {
     border: 1px solid lightgrey;
@@ -304,19 +417,19 @@ button.table-content i{
   .badge.mobile {
     display: none;
   }
+  figure {
+    border: none;
+    border-radius:0;
+    height: auto;
+  }
+  .bloc-img.desktop {
+    display: flex;
+    flex-direction: column;
+    
+  }
+  .bloc-img.desktop button {
+    align-self: center;
+    
+  }
 }
 
-.image.desktop {
-  height: 180px;
-  background-image: url(img/tim_berners_lee.webp);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-}
-.image.mobile {
-  height: 220px;
-  background-image: url(img/tim_berners_lee.webp);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-}
