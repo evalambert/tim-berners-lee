@@ -1,12 +1,11 @@
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "system-ui", "Helvetica Neue", Arial, sans-serif;
 }
 
 /* DESKTOP*/
 .desktop {
   display: none;
 }
-
 /* HEADER ///////////  */
 header {
   height: auto;
@@ -17,6 +16,10 @@ header {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+}
+
+section.header{
+  padding-bottom: 10px;
 }
 
 /* NAV ///////////  */
@@ -35,6 +38,9 @@ header .logo-britannica {
 }
 
 /* BTN ///////////  */
+button{
+  cursor: pointer;
+}
 header .btn-right {
   display: flex;
   align-items: center;
@@ -95,7 +101,6 @@ header .icon-glass {
 /* MAIN /////////// */
 main {
   padding: 8px 20px;
-  border: 1px solid blue;
 }
 
 /* CRUMBS */
@@ -116,27 +121,25 @@ main .crumb a::after {
 }
 /* ARTICLE */
 article {
-  max-width: 900px;
-  font-family: "Times New Roman", Times, serif;
+  max-width: 700px;
 }
 article h1 {
+  font-family: Georgia, 'Times New Roman', Times, serif;
   font-size: 1.7rem;
   font-weight: bold;
 }
 article h2 {
+  font-family: Georgia, 'Times New Roman', Times, serif;
   font-size: 1rem;
-  padding-bottom: 5px;
 }
 article button {
   color: #16568f;
   border: 1px solid lightgrey;
   padding: 8px 9px;
-  margin-right: 5px;
   border-radius: 6px;
   font-weight: bold;
-  font-family: Arial, Helvetica, sans-serif;
 }
-article .container-flex {
+section.header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -147,16 +150,31 @@ article a {
 }
 article .info {
   font-size: 1rem;
+  padding-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.info p:last-child {
+  font-size: 1rem;
   padding-bottom: 30px;
   display: flex;
   flex-direction: column;
-  font-family: Arial, Helvetica, sans-serif;
+  margin-bottom: 10px;
 }
 
 article .italic {
   font-style: italic;
   color: grey;
-  font-family: "Times New Roman", Times, serif;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+i {
+  font-style: italic;
+}
+.surname {
+  color: grey;
+  font-family: Georgia, "Times New Roman", Times, serif;
 }
 
 article p {
@@ -164,13 +182,13 @@ article p {
   line-height: 1.5rem;
 }
 
-article .pills {
-  font-family: Arial, Helvetica, sans-serif;
+article .badge {
   display: inline;
-  background-color: lightsalmon;
+  background-color: #fed7aa;
   width: auto;
   border-radius: 20px;
   padding: 0px 5px;
+  font-weight: bold ;
   font-size: 0.7rem;
 }
 article img {
@@ -182,37 +200,76 @@ article figure {
   border-radius: 10px;
   overflow: hidden;
   max-width: 400px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.08);
+  -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.08);
+  -moz-box-shadow: 0 0 8px rgba(0, 0, 0, 0.08);
 }
-div .article-btn {
+article figcaption {
+  display: flex;
+  align-items: center;
+  height: 40px;
+  padding: 10px;
+}
+div .container-btn {
   font-size: 0.7rem;
-  font-family: Arial, Helvetica, sans-serif;
 }
 .info.desktop {
   display: none;
 }
 article .audio-player {
+  display: flex;
+  justify-content: space-between;
   box-shadow: 0px 1px 5px 0px rgba(230, 230, 230, 0.75);
   -webkit-box-shadow: 0px 1px 5px 0px rgba(230, 230, 230, 0.75);
   -moz-box-shadow: 0px 1px 5px 0px rgba(230, 230, 230, 0.75);
 }
-article section {
+article section.main {
   border: 1px solid lightgrey;
   padding: 20px;
 }
 article .bold {
   font-weight: bold;
 }
+b {
+  font-weight: bold;
+}
+
 article .dotted {
   border-bottom: 2px dotted #16568f;
 }
-
 .bio {
-  font-family: Arial, Helvetica, sans-serif;
+  border-top: 1px solid lightgrey;
+  border-bottom: 1px solid lightgrey;
+  padding: 10px 0;
 }
+
+button.table-content{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+button.table-content i{
+  padding-right: 10px;
+}
+
+.link-media {
+  padding: 10px 0;
+  text-align: center;
+  font-size: 0.7rem;
+}
+.bloc-txt {
+  font-family: Georgia, 'Times New Roman', Times, serif ;
+  padding: 10px 0;
+}
+
+.info > button{
+  margin-top: 20px;
+}
+
 
 /* MEDIAQUERIES */
 @media (min-width: 760px) {
-  article .container-flex {
+  section.header {
     display: flex;
     flex-direction: column;
   }
@@ -228,12 +285,13 @@ article .dotted {
     border: 1px solid lightgray;
     padding: 20px;
   }
-  section.aside {
+  article section.main {
     display: flex;
     flex-direction: row;
     flex-direction: row-reverse;
     border: none;
     padding: 0;
+    border: none;
   }
 
   .bloc-txt {
@@ -243,4 +301,22 @@ article .dotted {
     border: 1px solid lightgrey;
     padding: 20px;
   }
+  .badge.mobile {
+    display: none;
+  }
+}
+
+.image.desktop {
+  height: 180px;
+  background-image: url(img/tim_berners_lee.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.image.mobile {
+  height: 220px;
+  background-image: url(img/tim_berners_lee.webp);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
