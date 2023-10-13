@@ -9,7 +9,7 @@
 - Type de défi : consolidation
 - Durée : 180 min
 - Date limite : 11/10/23 12h30
-- Stratégie de déploiement : _Page Github_ +
+- Stratégie de déploiement : Page Github
 - Défi d'équipe : solo
 
 ## 👉 CONSIGNES
