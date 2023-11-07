@@ -31,3 +31,11 @@
 ## ⏰ ÉTAT D'AVANCEMENT
 
 Terminé 🙃
+
+## 👀 APERÇU PROJET
+
+- Version Desktop :
+  ![Projet version Desktop](img/1.jpg)
+
+- Version Mobile :
+  ![Projet version Mobile](img/2.jpg)
