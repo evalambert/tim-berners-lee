@@ -5,8 +5,8 @@
 [https://evalambert.github.io/tim-berners-lee/](https://evalambert.github.io/tim-berners-lee/ "lien vers projet")
 
 ## 🎯 OBJECTIFS
-
-- Type de défi : consolidation
+- Contexte : Formation "Junior Developer" BeCode 
+- Type de challenge : Consolidation
 - Durée : 180 min
 - Date limite : 11/10/23 12h30
 - Stratégie de déploiement : Page Github
@@ -14,13 +14,7 @@
 
 ## 👉 CONSIGNES
 
-- Créer un repository
-- Créer une page HTML et CSS
-- Créer un dossier img
-- Créer un README.md
-- Travailler via Vite.js
-- Commiter, pusher
-- Builder et déployer sur une page Github
+- Reproduire à l'identique un site d'après maquette 
 
 ## 🌐 TECHNO & LANGUAGES UTILISÉS
 
